@@ -1,0 +1,48 @@
+site_name: PicoMQ Python client
+site_url: https://linnik.github.io/picomq-python/
+repo_url: https://github.com/linnik/picomq-python
+
+theme:
+  name: material
+  custom_dir: overrides
+  features:
+    - content.tabs.link
+    - navigation.indexes
+
+nav:
+  - Overview: index.md
+  - API tour: examples.md
+  - Connections: connection.md
+  - Topics: topics.md
+  - Producers: producers.md
+  - Reading: reading.md
+  - Errors: errors.md
+  - Advanced:
+      - advanced/index.md
+      - How the client behaves: advanced/behavior.md
+      - Producer delivery and fencing: advanced/producer-semantics.md
+      - Protocol: advanced/protocol.md
+
+plugins:
+  - search
+
+validation:
+  anchors: warn
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
